@@ -1,6 +1,8 @@
 # VexWarp
 
-VexWarp is an implementation of the [STFT](https://en.wikipedia.org/wiki/Short-time_Fourier_transform) and [Phase Vocoder](https://en.wikipedia.org/wiki/Phase_vocoder) algorithms for audio time stretching and pitch shifting. It can be used to slow down (or speed up) audio segments without changing pitch, ot to transpose audio segments without changing speed, or both.
+VexWarp is a JavaScript implementation of the [STFT](https://en.wikipedia.org/wiki/Short-time_Fourier_transform) and [Phase Vocoder](https://en.wikipedia.org/wiki/Phase_vocoder) algorithms for audio time stretching and pitch shifting. It can be used to slow down (or speed up) audio segments without changing pitch, ot to transpose audio segments without changing speed, or both.
+
+VexWarp currently uses `dsp.js` for its FFT, but will work with any FFT library that supports typed arrays. The meat of the algorthm is in `src/stretch.js`, and it can be used in both batch and real-time applications.
 
 # Demo
 
