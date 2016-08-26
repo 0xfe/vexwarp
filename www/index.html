@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vex TimeWarp</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/alertify.core.css" rel="stylesheet">
+    <link href="css/alertify.default.css" rel="stylesheet">
+    <link href="css/slider.css" rel="stylesheet">
+    <link href="css/timewarp.css" rel="stylesheet">
+
+    <!--
+    <script data-main="js/main" src="js/support/require.js"></script>
+    -->
+
+    <script src="js/support/require.js"></script>
+    <script data-main="js/main" src="js/timewarp-min.js"></script>
+</head>
+  </head>
+  <body>
+    <div class="container">
+      <h1>VexWarp</h1>
+
+      <div id="info">
+        Slow down, pitch shift, and loop your music online.
+        <br/>
+        Works best on <a href="http://google.com/chrome">Google Chrome</a>.
+      </div>
+
+      <div id="foo" style="margin-top: 50px">
+          <input type="file" id="files" name="files[]"
+                 style="display:none;"/>
+          <button id="open" class="btn btn-success btn-lg"
+                  data-placement=right data-toggle="tooltip"
+                  title="Click here to load an audio file from disk.">
+            <span class="glyphicon glyphicon-file"></span>
+            Open Audio File</button>
+          <br/>
+      </div>
+
+      <div style="margin:40px">
+        <div id="filename">No file loaded</div>
+        <div id="widget" class="center-block" style="width:700px;"
+             data-placement=bottom data-toggle="tooltip"
+             title="Drag to select section."></div>
+      </div>
+
+      <div>
+          <button id="play" class="btn btn-success"
+                  data-placement=left data-toggle="tooltip"
+                  title="Play warped audio." style="margin-right: 10px;">
+            <span class="glyphicon glyphicon-play"></span>
+          </button>
+
+
+          <button id="pause" class="btn btn-danger"
+                  style="display:none;margin-right: 10px;">
+            <span class="glyphicon glyphicon-pause"></span>
+          </button>
+
+          <button id="loop" class="btn btn-success" data-toggle="button"
+                  data-placement=right data-toggle="tooltip"
+                  title="Loop section">
+            <span class="glyphicon glyphicon-repeat"></span>
+          </button>
+
+          <p style="margin:20px"></p>
+
+          <span>Speed</span>
+          <input id="speed-slider" type="text" style="width:200px"
+                 value="100"
+                 data-slider-min="40" data-slider-max="200"
+                 data-slider-step="10" data-slider-value="100"
+                 data-slider-tooltip="show">
+
+          <span>Pitch Shift</span>
+          <input id="pitch-slider" type="text" style="width:200px"
+                 value="0"
+                 data-slider-min="-12" data-slider-max="12"
+                 data-slider-step="1" data-slider-value="0"
+                 data-slider-tooltip="show">
+
+      </div>
+
+      <br/>
+      <span id="surprise" style="display:none;">
+        Liked it? Get the
+        <a href='https://chrome.google.com/webstore/detail/vexwarp/nkdmbkieeegbiockljbbebpdafnbckfj'>
+          VexWarp Chrome App
+        </a> for offline goodness.<br/>
+      </span>
+      <br/>
+
+      <div id="footer" class="center-block">
+        A <a href="http://vexflow.com">VexFlow</a> production.<br/>
+        Send comments, criticism, gold to <a href="http://0xfe.muthanna.com">0xFE</a>.
+      </div>
+
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-8346562-7', 'vexflow.com');
+        ga('send', 'pageview');
+
+      </script>
+  </body>
+</html>
